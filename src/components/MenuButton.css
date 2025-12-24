@@ -1,0 +1,160 @@
+/* ============================================
+   MENU BUTTON - Custom Styled Menu with Icon
+   ============================================
+
+   Structure:
+   - menu-btn (main button container)
+     ├── menu-text (left side text)
+     ├── menu-separator (vertical line)
+     └── menu-icon (hamburger icon)
+         ├── hamburger-line (top)
+         ├── hamburger-line (middle)
+         └── hamburger-line (bottom)
+
+   Key Features:
+   - Solid purple/blue border
+   - White background
+   - Rounded corners
+   - Vertical separator between text and icon
+   - 3-line hamburger icon
+   ============================================ */
+
+.menu-btn {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  gap: 0;
+
+  /* Size */
+  padding: 0;
+  min-width: 200px;
+
+  /* Border - removed */
+  border: none;
+  border-radius: 16px;
+
+  /* Background */
+  background: #FFFFFF;
+
+  /* Reset */
+  cursor: pointer;
+  outline: none;
+
+  /* Interaction */
+  transition: all 0.3s ease;
+
+  /* Position */
+  position: relative;
+}
+
+/* Menu text */
+.menu-text {
+  /* Layout */
+  flex: 1 1 auto;
+  padding: 1rem 1.5rem;
+
+  /* Typography */
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-semibold);
+  color: #3D3D3D;
+  text-align: left;
+
+  /* Position above border */
+  position: relative;
+  z-index: 1;
+}
+
+/* Vertical separator line */
+.menu-separator {
+  /* Visual */
+  width: 2px;
+  height: 60px;
+  background: #e2e8f0;
+
+  /* Position */
+  position: relative;
+  z-index: 1;
+}
+
+/* Hamburger icon container */
+.menu-icon {
+  /* Layout */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+
+  /* Size */
+  padding: 1rem 1.5rem;
+
+  /* Position above border */
+  position: relative;
+  z-index: 1;
+}
+
+/* Hamburger lines */
+.hamburger-line {
+  /* Visual */
+  width: 40px;
+  height: 4px;
+  background: #3D3D3D;
+  border-radius: 2px;
+
+  /* Animation */
+  transition: all 0.3s ease;
+}
+
+/* Hover effects removed */
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .menu-btn {
+    min-width: 160px;
+  }
+
+  .menu-text {
+    font-size: 1.25rem;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .menu-icon {
+    padding: 0.875rem 1.25rem;
+  }
+
+  .menu-separator {
+    height: 50px;
+  }
+
+  .hamburger-line {
+    width: 32px;
+    height: 3px;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-btn {
+    min-width: 140px;
+  }
+
+  .menu-text {
+    font-size: 1.125rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .menu-icon {
+    padding: 0.75rem 1rem;
+  }
+
+  .menu-separator {
+    height: 45px;
+  }
+
+  .hamburger-line {
+    width: 28px;
+  }
+}

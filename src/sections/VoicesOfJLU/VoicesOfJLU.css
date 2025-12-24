@@ -1,0 +1,265 @@
+/* Main Section Container */
+.voices-of-jlu {
+  width: 100%;
+  padding: 80px 40px;
+  background: #f5f5f0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  z-index: 4;
+}
+
+/* Section Header */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.sub-text {
+  font-size: 1.125rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0;
+}
+
+/* Image Gallery Container */
+.image-gallery {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Gallery Item */
+.gallery-item {
+  flex: 0 0 8%;
+  height: 100%;
+  cursor: pointer;
+  transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Active Gallery Item */
+.gallery-item.active {
+  flex: 0 0 40%;
+}
+
+/* Gallery Image */
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image Overlay for Darkening Effect */
+.gallery-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:not(.active) .gallery-image::before {
+  opacity: 0.8;
+}
+
+/* Overlay Content */
+.overlay-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  color: white;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 0 0 24px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Show overlay only on active item */
+.gallery-item.active .overlay-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Testimonial Name */
+.testimonial-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Testimonial Quote */
+.testimonial-quote {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0;
+  font-style: italic;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effect for non-active items */
+.gallery-item:not(.active):hover {
+  flex: 0 0 12%;
+}
+
+/* Responsive Design - Tablets */
+@media (max-width: 1024px) {
+  .voices-of-jlu {
+    padding: 60px 30px;
+    gap: 40px;
+  }
+
+  .main-heading {
+    font-size: 3.5rem;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  .image-gallery {
+    height: 400px;
+  }
+
+  .gallery-item {
+    flex: 0 0 10%;
+  }
+
+  .gallery-item.active {
+    flex: 0 0 45%;
+  }
+
+  .testimonial-name {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+  .voices-of-jlu {
+    padding: 40px 20px;
+    gap: 32px;
+  }
+
+  .main-heading {
+    font-size: 2.5rem;
+  }
+
+  .sub-text {
+    font-size: 0.9rem;
+  }
+
+  .image-gallery {
+    height: 350px;
+    gap: 8px;
+  }
+
+  .gallery-item {
+    flex: 0 0 6%;
+  }
+
+  .gallery-item.active {
+    flex: 0 0 50%;
+  }
+
+  .overlay-content {
+    padding: 20px;
+  }
+
+  .testimonial-name {
+    font-size: 1.25rem;
+  }
+
+  .testimonial-quote {
+    font-size: 0.875rem;
+  }
+
+  /* Disable hover effect on mobile */
+  .gallery-item:not(.active):hover {
+    flex: 0 0 6%;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .voices-of-jlu {
+    padding: 32px 16px;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .image-gallery {
+    height: 300px;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .gallery-item {
+    flex: 0 0 60px;
+    width: 100%;
+  }
+
+  .gallery-item.active {
+    flex: 0 0 200px;
+  }
+
+  .overlay-content {
+    padding: 16px;
+  }
+
+  .testimonial-name {
+    font-size: 1.125rem;
+  }
+
+  .testimonial-quote {
+    font-size: 0.8rem;
+  }
+}

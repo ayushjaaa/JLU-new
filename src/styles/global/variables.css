@@ -1,0 +1,63 @@
+/* Global CSS Variables - Define your colors and fonts here */
+:root {
+  /* Font Families */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ============================================
+     HOME PAGE SPECIFIC COLORS & BACKGROUNDS
+     ============================================ */
+
+  /* Background Colors */
+  --home-bg-primary: #FFFFFF;        /* Main white background */
+  --home-bg-secondary: #F6F7F0;      /* Light beige background (for sections) */
+  --home-bg-dark: #21313C;           /* Dark blue/gray background (for dark sections) */
+  --home-bg-transparent: transparent; /* Transparent background */
+
+  /* Background Images */
+  --homeHerobgimage: url('../../assets/images/homeHerobgimage.png');
+
+  /* Text Colors */
+  --home-text-primary: #F6F7F0;      /* Primary text (light) */
+  --home-text-secondary: #21313C;    /* Secondary text (dark) */
+  --home-text-white: #FFFFFF;        /* White text */
+  --home-text-accent: #64B300;       /* Green accent text */
+  --home-text-paragraph: #939393;    /* Card paragraph text (lighter gray) */
+  --home-text-span: #6A7479;         /* Span/secondary text color */
+
+  /* ============================================
+     ABOUT PAGE SPECIFIC COLORS & BACKGROUNDS
+     ============================================ */
+  --about-bg-primary: #faf5ff;
+  --about-bg-secondary: #f3e8ff;
+  --about-color-primary: #7c3aed;
+  --about-color-secondary: #8b5cf6;
+  --about-color-text-primary: #1e293b;
+  --about-color-text-secondary: #64748b;
+
+  /* ============================================
+     CONTACT PAGE SPECIFIC COLORS & BACKGROUNDS
+     ============================================ */
+  --contact-bg-primary: #ecfdf5;
+  --contact-bg-secondary: #d1fae5;
+  --contact-color-primary: #10b981;
+  --contact-color-secondary: #34d399;
+  --contact-color-text-primary: #1e293b;
+  --contact-color-text-secondary: #64748b;
+
+  /* ============================================
+     COMMON UTILITY COLORS (Optional)
+     ============================================ */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-white: #ffffff;
+  --color-black: #000000;
+}
