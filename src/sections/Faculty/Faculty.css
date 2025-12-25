@@ -1,0 +1,151 @@
+/* Faculty Section - Main Container */
+.faculty-section {
+  background-color: var(--home-bg-secondary);
+  padding: 80px 60px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/* Header Row */
+.faculty-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.faculty-title,
+.faculty-year {
+  font-size: 56px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.faculty-title {
+  text-transform: uppercase;
+}
+
+/* Faculty Content Wrapper */
+.faculty-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+/* Faculty Row Wrapper */
+.faculty-row {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+/* First Row - Justify content end (right aligned) */
+.faculty-row-first {
+  justify-content: flex-end;
+}
+
+/* Second Row - Justify content start (left aligned) */
+.faculty-row-second {
+  justify-content: flex-start;
+}
+
+/* Individual Faculty Card */
+.faculty-card {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+/* Image Container */
+.faculty-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.faculty-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Faculty Info Container */
+.faculty-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faculty-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.faculty-designation {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5a6c7d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  .faculty-section {
+    padding: 60px 40px;
+  }
+
+  .faculty-title,
+  .faculty-year {
+    font-size: 44px;
+  }
+
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+  .faculty-section {
+    padding: 40px 20px;
+  }
+
+  .faculty-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .faculty-title,
+  .faculty-year {
+    font-size: 32px;
+  }
+
+  .faculty-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .faculty-name {
+    font-size: 16px;
+  }
+
+  .faculty-designation {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,266 @@
+/* ========================================
+   INTRO SECTION - Sticky Background Layer
+   ======================================== */
+
+.awards-top-div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--home-bg-secondary);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.awards-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.awards-text-wrapper h2 {
+  font-size: 120px;
+  font-weight: 700;
+  color: #2d2d2d;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.awards-text-wrapper p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #666;
+  max-width: 600px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.awards-text-wrapper .highlight {
+  color: #7cb342;
+  font-weight: 500;
+}
+
+/* ========================================
+   CONTENT SECTION - Overlaying Foreground
+   ======================================== */
+
+.awards-bottom-div {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, transparent 0%, #f5f5f0 40%);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+}
+
+/* GridWrapper - controls visual width with horizontal padding */
+.awards-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
+  padding: 0 8vw;
+  width: 100%;
+  max-width: 1400px;
+  justify-content: center;
+}
+
+/* Position cards for organic museum-wall feeling */
+/* Card 1 - Black trophy figure (top left) */
+.awards-grid-wrapper .award-card:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: start;
+  justify-self: end;
+  margin-top: 0;
+}
+
+/* Card 2 - Gold medal with blue ribbon (center, tall) */
+.awards-grid-wrapper .award-card:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  justify-self: center;
+  margin-top: 40px;
+}
+
+/* Card 3 - Yellow trophy being held (top right) */
+.awards-grid-wrapper .award-card:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+  justify-self: center;
+  margin-top: 0;
+}
+
+/* Card 4 - Golden trophies (bottom left) */
+.awards-grid-wrapper .award-card:nth-child(4) {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: end;
+  justify-self: center;
+  
+  padding-top: 20px;
+  margin-top: -40px;
+}
+
+/* Card 5 - Red trophy (straddling between columns 2 and 3) */
+.awards-grid-wrapper .award-card:nth-child(5) {
+  grid-column: 2 / 4;
+  grid-row: 2 / span 5;
+  align-self: end;
+  justify-self: center;
+
+}
+
+/* AwardCard structure */
+.award-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 240px;
+  
+}
+
+.award-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Caption - left aligned for editorial feel */
+.award-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.award-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: left;
+}
+
+.award-year {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+  text-align: left;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .awards-text-wrapper h2 {
+    font-size: 100px;
+  }
+
+  .awards-grid-wrapper {
+    gap: 32px 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .awards-text-wrapper h2 {
+    font-size: 80px;
+  }
+
+  .awards-bottom-div {
+    padding: 60px 40px 80px;
+  }
+
+  .awards-grid-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+    padding: 0 6vw;
+  }
+
+  .awards-grid-wrapper .award-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  .awards-grid-wrapper .award-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+  }
+
+  .awards-grid-wrapper .award-card:nth-child(3) {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 0;
+  }
+
+  .awards-grid-wrapper .award-card:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+  }
+
+  .awards-grid-wrapper .award-card:nth-child(5) {
+    grid-column: 1;
+    grid-row: 3;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .awards-text-wrapper h2 {
+    font-size: 60px;
+  }
+
+  .awards-bottom-div {
+    padding: 40px 24px 80px;
+  }
+
+  .awards-text-wrapper p {
+    font-size: 0.875rem;
+    max-width: 90%;
+  }
+
+  .awards-grid-wrapper {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 0 24px;
+  }
+
+  .awards-grid-wrapper .award-card:nth-child(1),
+  .awards-grid-wrapper .award-card:nth-child(2),
+  .awards-grid-wrapper .award-card:nth-child(3),
+  .awards-grid-wrapper .award-card:nth-child(4),
+  .awards-grid-wrapper .award-card:nth-child(5) {
+    grid-column: 1;
+    grid-row: auto;
+    margin: 0;
+    align-self: stretch;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-text-wrapper h2 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+
+  .awards-text-wrapper p {
+    font-size: 0.8125rem;
+  }
+}

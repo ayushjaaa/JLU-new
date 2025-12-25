@@ -20,6 +20,7 @@
   --home-bg-secondary: #F6F7F0;      /* Light beige background (for sections) */
   --home-bg-dark: #21313C;           /* Dark blue/gray background (for dark sections) */
   --home-bg-transparent: transparent; /* Transparent background */
+  --footer-bg: #F6F7F0;              /* Footer background color */
 
   /* Background Images */
   --homeHerobgimage: url('../../assets/images/homeHerobgimage.png');

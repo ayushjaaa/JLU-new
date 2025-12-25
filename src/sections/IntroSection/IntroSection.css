@@ -1,6 +1,6 @@
 .intro-section {
   padding: 0;
-  /* background-color:red; */
+  background-color: var(--home-bg-secondary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,8 @@
 .intro-text {
   width: 60%;
   max-width: 600px;
-  padding-left: 40px;
+  padding-left: clamp(2rem, 3vw, 2.5rem);
+  padding-top: clamp(4rem, 8vh, 6rem);
 }
 
 .intro-text h2 {

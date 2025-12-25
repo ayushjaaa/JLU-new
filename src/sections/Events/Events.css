@@ -1,0 +1,478 @@
+/* ===================================
+   EVENTS SECTION - MAIN CONTAINER
+   =================================== */
+
+.events-section {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--home-bg-secondary);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ===================================
+   TOP CONTENT AREA - TWO COLUMNS
+   =================================== */
+
+.events-top-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 100px 80px;
+}
+
+/* ===================================
+   LEFT TEXT BLOCK - 35-40% WIDTH
+   =================================== */
+
+.events-left-block {
+  flex: 0 0 38%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.events-label {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1a1a1a;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.events-heading {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: left;
+}
+
+.events-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+  max-width: 400px;
+}
+
+.events-cta-button {
+  padding: 14px 28px;
+  background-color: #b4e87e;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+.events-cta-button:hover {
+  background-color: #a3d76d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(180, 232, 126, 0.3);
+}
+
+.events-cta-button:active {
+  transform: translateY(0);
+}
+
+/* ===================================
+   RIGHT CARDS BLOCK - 60-65% WIDTH
+   =================================== */
+
+.events-right-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.events-cards-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.events-cards-wrapper {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===================================
+   EVENT CARD DESIGN
+   =================================== */
+
+.event-card {
+  min-width: calc(45% - 16px);
+  background-color: #f0ede8;
+  border-radius: 0;
+  padding: 0px 32px 32px 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+/* ===================================
+   EVENT HEADER - DATE BADGE + TITLE
+   =================================== */
+
+.event-header {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 0 0 0;
+}
+
+/* ===================================
+   DATE BADGE
+   =================================== */
+
+.event-date-badge {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px;
+}
+
+.event-month {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.event-day {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+/* ===================================
+   CARD CONTENT
+   =================================== */
+
+.event-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #1a1a1a;
+  margin: 0;
+  min-height: 80px;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 32px;
+}
+
+.event-time,
+.event-location {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  color: #999;
+}
+
+.event-time svg,
+.event-location svg {
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+.event-time span,
+.event-location span {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #999;
+}
+
+.event-read-more {
+  font-size: 15px;
+  font-weight: 600;
+  color: #7ec850;
+  text-decoration: underline;
+  margin-top: 12px;
+  margin-left: 32px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.event-read-more:hover {
+  color: #64B300;
+}
+
+/* ===================================
+   SLIDER NAVIGATION
+   =================================== */
+
+.events-slider-navigation {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-nav-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #1a1a1a;
+}
+
+.slider-nav-button:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #1a1a1a;
+  transform: scale(1.05);
+}
+
+.slider-nav-button:active {
+  transform: scale(0.95);
+}
+
+/* ===================================
+   BOTTOM IMAGE GALLERY
+   =================================== */
+
+.events-bottom-gallery {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.gallery-image-wrapper {
+  flex: 1;
+  height: 350px;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-image-wrapper:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - 1400px
+   =================================== */
+
+@media (max-width: 1400px) {
+  .events-section {
+    padding: 80px 60px;
+    gap: 60px;
+  }
+
+  .events-heading {
+    font-size: 48px;
+  }
+
+  .event-card {
+    min-width: calc(50% - 12px);
+  }
+
+  .gallery-image-wrapper {
+    height: 300px;
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - 1024px
+   =================================== */
+
+@media (max-width: 1024px) {
+  .events-section {
+    padding: 60px 40px;
+    gap: 50px;
+  }
+
+  .events-top-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .events-left-block {
+    flex: 1;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .events-label {
+    margin: 0 auto;
+  }
+
+  .events-heading {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .events-description {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .events-cta-button {
+    margin: 8px auto 0;
+  }
+
+  .event-card {
+    min-width: calc(50% - 12px);
+  }
+
+  .events-bottom-gallery {
+    flex-wrap: wrap;
+  }
+
+  .gallery-image-wrapper {
+    flex: 1 1 calc(50% - 8px);
+    height: 280px;
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - 768px
+   =================================== */
+
+@media (max-width: 768px) {
+  .events-section {
+    padding: 50px 24px;
+    gap: 40px;
+  }
+
+  .events-heading {
+    font-size: 36px;
+  }
+
+  .events-description {
+    font-size: 15px;
+  }
+
+  .event-card {
+    min-width: 100%;
+  }
+
+  .events-cards-wrapper {
+    gap: 16px;
+  }
+
+  .event-title {
+    font-size: 16px;
+    min-height: auto;
+  }
+
+  .slider-nav-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gallery-image-wrapper {
+    flex: 1 1 100%;
+    height: 250px;
+  }
+
+  .events-bottom-gallery {
+    gap: 12px;
+  }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN - 480px
+   =================================== */
+
+@media (max-width: 480px) {
+  .events-section {
+    padding: 40px 16px;
+    gap: 32px;
+  }
+
+  .events-heading {
+    font-size: 28px;
+  }
+
+  .events-description {
+    font-size: 14px;
+  }
+
+  .events-cta-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .event-card {
+    padding: 20px;
+  }
+
+  .event-date-badge {
+    width: 60px;
+    height: 60px;
+  }
+
+  .event-month {
+    font-size: 12px;
+  }
+
+  .event-day {
+    font-size: 24px;
+  }
+
+  .gallery-image-wrapper {
+    height: 200px;
+  }
+}

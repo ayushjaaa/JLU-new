@@ -2,7 +2,7 @@
 .image-gallery-section {
   width: 100%;
   position: relative;
-  background: white;
+  background: var(--home-bg-secondary);
 }
 
 /* Each wrapper needs DOUBLE viewport height to allow scrolling while stuck */
