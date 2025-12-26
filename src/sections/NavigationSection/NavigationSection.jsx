@@ -26,7 +26,13 @@ const NavigationSection = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <section className="nav-section nav-section-open">
+    <section
+      id="navigation-menu"
+      className="nav-section nav-section-open"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Main navigation"
+    >
       <div className="nav-wrapper">
         <div className="nav-container">
           <div className="nav-left-column">
