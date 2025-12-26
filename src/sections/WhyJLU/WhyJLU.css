@@ -47,6 +47,8 @@
   max-width: 1400px;
   width: 100%;
   max-height: calc(100vh - 240px);
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 /* ========================================
@@ -62,6 +64,8 @@
   flex: 1;
   max-width: 350px;
   height: 360px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .card-top {
@@ -212,17 +216,22 @@
 
   .whyjlu-content {
     padding: 60px 40px;
+    overflow-x: hidden;
   }
 
   .whyjlu-cards-container {
     flex-direction: column;
     gap: 40px;
     align-items: stretch;
+    width: 100%;
+    max-width: 100%;
   }
 
   .whyjlu-card {
     transform: none !important;
     min-height: auto !important;
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -233,10 +242,19 @@
 
   .whyjlu-content {
     padding: 40px 24px;
+    overflow-x: hidden;
+  }
+
+  .whyjlu-cards-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
 
   .whyjlu-card {
     padding: 32px 24px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .card-big-number,
@@ -253,6 +271,23 @@
   .whyjlu-intro-text {
     font-size: 48px;
     letter-spacing: -1px;
+  }
+
+  .whyjlu-content {
+    padding: 40px 16px;
+    overflow-x: hidden;
+  }
+
+  .whyjlu-cards-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .whyjlu-card {
+    padding: 32px 20px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .card-big-number,

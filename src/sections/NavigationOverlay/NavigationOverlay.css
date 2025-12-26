@@ -7,6 +7,7 @@
   background-color: var(--home-bg-secondary, #F5F5EF);
   z-index: 1000;
   overflow-y: auto;
+  overflow-x: hidden;
   animation: overlayFadeIn 0.3s ease;
 }
 
@@ -21,7 +22,7 @@
 
 .nav-overlay-container {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   padding-left: clamp(2rem, 3vw, 2.5rem);
   padding-right: clamp(2rem, 3vw, 2.5rem);
   padding-top: clamp(4rem, 8vh, 6rem);
@@ -30,6 +31,7 @@
   flex-direction: row;
   gap: 4rem;
   position: relative;
+  box-sizing: border-box;
 }
 
 .nav-left-column {
@@ -141,31 +143,61 @@
   transform: scale(0.95);
 }
 
-@media (max-width: 1024px) {
+/* Tablet: 768px - 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
   .nav-overlay-container {
     gap: 3rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
   }
 
   .nav-item {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
+    line-height: 1.35;
   }
 
   .sub-nav-item {
-    font-size: clamp(0.9rem, 1.3vw, 1.1rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-overlay-container {
-    flex-direction: column;
-    gap: 3rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 4rem;
+    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+    line-height: 1.45;
   }
 
   .nav-left-column {
     gap: 1.5rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+
+  .sub-nav-list {
+    gap: 1rem;
+    padding-top: 2rem;
+  }
+
+  .nav-close-button {
+    width: 44px;
+    height: 44px;
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+/* Mobile: up to 767px */
+@media (max-width: 767px) {
+  .nav-overlay-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 4.5rem;
+    padding-bottom: 3rem;
+    min-height: auto;
+  }
+
+  .nav-left-column {
+    gap: 1.2rem;
   }
 
   .nav-divider {
@@ -173,12 +205,16 @@
   }
 
   .nav-right-column {
-    flex: 1;
+    flex: none;
+  }
+
+  .nav-list {
+    gap: 0.8rem;
   }
 
   .sub-nav-list {
     padding-top: 0;
-    gap: 1rem;
+    gap: 0.85rem;
   }
 
   .nav-close-button {
@@ -189,10 +225,12 @@
   }
 
   .nav-item {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
   }
 
   .sub-nav-item {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 }

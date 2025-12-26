@@ -72,6 +72,41 @@
   line-height: 1;
 }
 
+/* Navigation buttons */
+.gallery-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  color: white;
+  font-size: 3rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  padding: 0;
+  line-height: 1;
+}
+
+.gallery-nav-button:active {
+  background: rgba(255, 255, 255, 0.5);
+  transform: translateY(-50%) scale(0.95);
+}
+
+.prev-button {
+  left: 40px;
+}
+
+.next-button {
+  right: 40px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .solid-text {
@@ -82,5 +117,9 @@
     font-size: 2.5rem;
     -webkit-text-stroke: 1.5px white;
     text-stroke: 1.5px white;
+  }
+
+  .gallery-nav-button {
+    display: none;
   }
 }

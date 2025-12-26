@@ -105,17 +105,22 @@
   flex-direction: column;
   gap: 32px;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 
 .events-cards-container {
   overflow: hidden;
   position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 .events-cards-wrapper {
   display: flex;
   gap: 24px;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
 }
 
 /* ===================================
@@ -133,6 +138,9 @@
   gap: 5px;
   position: relative;
   transition: all 0.3s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .event-card:hover {
@@ -332,7 +340,7 @@
 }
 
 /* ===================================
-   RESPONSIVE DESIGN - 1024px
+   RESPONSIVE DESIGN - 1024px (TABLET)
    =================================== */
 
 @media (max-width: 1024px) {
@@ -344,6 +352,7 @@
   .events-top-content {
     flex-direction: column;
     gap: 40px;
+    padding: 80px 40px;
   }
 
   .events-left-block {
@@ -374,26 +383,84 @@
 
   .event-card {
     min-width: calc(50% - 12px);
+    padding: 24px;
+  }
+
+  .event-header {
+    gap: 16px;
+  }
+
+  .event-date-badge {
+    width: 80px;
+    height: 80px;
+  }
+
+  .event-month {
+    font-size: 14px;
+  }
+
+  .event-day {
+    font-size: 32px;
+  }
+
+  .event-title {
+    font-size: 18px;
+    min-height: 70px;
+  }
+
+  .event-meta {
+    padding-left: 24px;
+  }
+
+  .event-time,
+  .event-location {
+    font-size: 14px;
+  }
+
+  .event-read-more {
+    margin-left: 24px;
+    font-size: 14px;
   }
 
   .events-bottom-gallery {
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   .gallery-image-wrapper {
-    flex: 1 1 calc(50% - 8px);
+    flex: 1 1 calc(50% - 4px);
     height: 280px;
   }
 }
 
 /* ===================================
-   RESPONSIVE DESIGN - 768px
+   RESPONSIVE DESIGN - 768px (MOBILE)
    =================================== */
 
 @media (max-width: 768px) {
   .events-section {
-    padding: 50px 24px;
+    padding: 50px 0;
     gap: 40px;
+    overflow-x: hidden;
+  }
+
+  .events-top-content {
+    padding: 60px 24px;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .events-left-block {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .events-right-block {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 24px;
+    box-sizing: border-box;
   }
 
   .events-heading {
@@ -404,42 +471,134 @@
     font-size: 15px;
   }
 
-  .event-card {
-    min-width: 100%;
+  .events-cards-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .events-cards-wrapper {
     gap: 16px;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .event-card {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .event-header {
+    gap: 14px;
+    padding: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .event-date-badge {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+  }
+
+  .event-month {
+    font-size: 13px;
+  }
+
+  .event-day {
+    font-size: 30px;
   }
 
   .event-title {
     font-size: 16px;
     min-height: auto;
+    line-height: 1.4;
+    flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: calc(100% - 90px);
+  }
+
+  .event-meta {
+    padding-left: 0;
+    gap: 10px;
+    margin-top: 12px;
+    width: 100%;
+  }
+
+  .event-time,
+  .event-location {
+    font-size: 13px;
+    word-wrap: break-word;
+    width: 100%;
+  }
+
+  .event-time span,
+  .event-location span {
+    font-size: 13px;
+    word-wrap: break-word;
+  }
+
+  .event-read-more {
+    margin-left: 0;
+    font-size: 13px;
+    margin-top: 12px;
   }
 
   .slider-nav-button {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .events-bottom-gallery {
+    gap: 12px;
+    padding: 0 24px;
   }
 
   .gallery-image-wrapper {
     flex: 1 1 100%;
     height: 250px;
   }
-
-  .events-bottom-gallery {
-    gap: 12px;
-  }
 }
 
 /* ===================================
-   RESPONSIVE DESIGN - 480px
+   RESPONSIVE DESIGN - 480px (SMALL MOBILE)
    =================================== */
 
 @media (max-width: 480px) {
   .events-section {
-    padding: 40px 16px;
+    padding: 40px 0;
     gap: 32px;
+    overflow-x: hidden;
+  }
+
+  .events-top-content {
+    padding: 50px 16px;
+    gap: 32px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .events-left-block {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .events-right-block {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .events-label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
   }
 
   .events-heading {
@@ -448,28 +607,107 @@
 
   .events-description {
     font-size: 14px;
+    max-width: 100%;
   }
 
   .events-cta-button {
     padding: 12px 24px;
     font-size: 14px;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .events-cards-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .events-cards-wrapper {
+    width: 100%;
   }
 
   .event-card {
-    padding: 20px;
+    padding: 20px 16px;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+
+  .event-header {
+    gap: 12px;
+    padding: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
   }
 
   .event-date-badge {
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
+    padding: 8px;
+    flex-shrink: 0;
   }
 
   .event-month {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .event-day {
-    font-size: 24px;
+    font-size: 26px;
+  }
+
+  .event-title {
+    font-size: 14px;
+    min-height: auto;
+    line-height: 1.4;
+    flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: calc(100% - 80px);
+  }
+
+  .event-meta {
+    padding-left: 0;
+    gap: 8px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .event-time,
+  .event-location {
+    font-size: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .event-time span,
+  .event-location span {
+    font-size: 12px;
+    word-wrap: break-word;
+  }
+
+  .event-read-more {
+    margin-left: 0;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .slider-nav-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .events-slider-navigation {
+    gap: 12px;
+  }
+
+  .events-bottom-gallery {
+    gap: 8px;
+    padding: 0 16px;
   }
 
   .gallery-image-wrapper {

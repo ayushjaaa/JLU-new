@@ -84,6 +84,7 @@
   align-items: center;
   gap: 20px;
   padding-right: 120px;
+  overflow: hidden;
 }
 
 /* Impact Cards */
