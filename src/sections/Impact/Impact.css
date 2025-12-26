@@ -46,6 +46,7 @@
   justify-content: center;
   padding: 60px 80px 60px 120px;
   gap: 40px;
+  overflow: hidden;
 }
 
 .impact-heading {

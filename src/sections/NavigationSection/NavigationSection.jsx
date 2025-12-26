@@ -27,40 +27,36 @@ const NavigationSection = ({ isOpen, onClose }) => {
 
   return (
     <section className="nav-section nav-section-open">
-      <div className="nav-container">
-        <div className="nav-left-column">
-          <p className="nav-label">Navigation</p>
-          <nav className="nav-list">
-            {navigationItems.map((item) => (
-              <a
-                key={item.id}
-                href={item.path}
-                className={`nav-item ${item.id === 'academics' ? 'active' : ''}`}
-              >
-                {item.id === 'academics' && <span className="nav-dot"></span>}
-                {item.label}
-              </a>
-            ))}
-          </nav>
+      <div className="nav-wrapper">
+        <div className="nav-container">
+          <div className="nav-left-column">
+            <p className="nav-label">Navigation</p>
+            <nav className="nav-list">
+              {navigationItems.map((item) => (
+                <a
+                  key={item.id}
+                  href={item.path}
+                  className={`nav-item ${item.id === 'academics' ? 'active' : ''}`}
+                >
+                  {item.id === 'academics' && <span className="nav-dot"></span>}
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+
+          <div className="nav-divider"></div>
+
+          <div className="nav-right-column">
+            <nav className="sub-nav-list">
+              {academicsSubNav.map((item, index) => (
+                <a key={index} href={item.path} className="sub-nav-item">
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
         </div>
-
-        <div className="nav-divider"></div>
-
-        <div className="nav-right-column">
-          <nav className="sub-nav-list">
-            {academicsSubNav.map((item, index) => (
-              <a key={index} href={item.path} className="sub-nav-item">
-                {item.label}
-              </a>
-            ))}
-          </nav>
-        </div>
-
-        <button className="nav-close-button" aria-label="Close navigation">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-          </svg>
-        </button>
       </div>
     </section>
   );
