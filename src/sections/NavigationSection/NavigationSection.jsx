@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './NavigationSection.css';
 
 const NavigationSection = ({ isOpen, onClose }) => {
+  const [activeItem, setActiveItem] = useState('academics');
+
   const navigationItems = [
     { id: 'about', label: 'About Us', path: '/about' },
     { id: 'academics', label: 'Academics', path: '/academics' },
@@ -42,9 +44,13 @@ const NavigationSection = ({ isOpen, onClose }) => {
                 <a
                   key={item.id}
                   href={item.path}
-                  className={`nav-item ${item.id === 'academics' ? 'active' : ''}`}
+                  className={`nav-item ${activeItem === item.id ? 'active' : ''}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setActiveItem(item.id);
+                  }}
                 >
-                  {item.id === 'academics' && <span className="nav-dot"></span>}
+                  {activeItem === item.id && <span className="nav-dot"></span>}
                   {item.label}
                 </a>
               ))}

@@ -79,7 +79,6 @@ const VoicesOfJLU = () => {
             key={testimonial.id}
             className={`gallery-item ${activeIndex === index ? 'active' : ''}`}
             onClick={() => setActiveIndex(index)}
-            onMouseEnter={() => setActiveIndex(index)}
           >
             <div
               className="gallery-image"

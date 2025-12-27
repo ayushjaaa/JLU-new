@@ -139,10 +139,10 @@
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-/* Hover effect for non-active items */
-.gallery-item:not(.active):hover {
+/* Hover effect disabled - only click works */
+/* .gallery-item:not(.active):hover {
   flex: 0 0 12%;
-}
+} */
 
 /* Responsive Design - Tablets */
 @media (max-width: 1024px) {

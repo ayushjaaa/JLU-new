@@ -18,11 +18,7 @@ function Hero() {
       </div>
 
       {/* Center content - main hero heading */}
-      <div className="hero-content">
-        <div className="hero-heading">
-          <h1>Lorem ipsum dolor sit amet consectetur.</h1>
-        </div>
-      </div>
+ 
 
       {/* Scroll indicator at bottom */}
       <div className="hero-scroll">
