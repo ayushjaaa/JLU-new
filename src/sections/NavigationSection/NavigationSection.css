@@ -181,8 +181,45 @@
   opacity: 0.6;
 }
 
-/* Larger laptops: 15-16" (1920px+) - scale up to match 13-14" appearance */
-@media (min-width: 1920px) {
+/* Ultra-large displays: 4K, 16" MacBook Pro, Gaming laptops (2304px+) */
+@media (min-width: 2304px) {
+  .nav-wrapper {
+    width: 1540px;
+    height: 1540px;
+  }
+
+  .nav-container {
+    padding-top: 840px;
+    padding-right: 420px;
+    padding-bottom: 84px;
+    gap: 4rem;
+  }
+
+  .nav-left-column {
+    gap: 2.5rem;
+    padding-left: 5.5rem;
+  }
+
+  .nav-list {
+    gap: 1.5rem;
+  }
+
+  .nav-item {
+    font-size: 2.1rem;
+  }
+
+  .sub-nav-list {
+    gap: 1.3rem;
+    padding-top: 3.2rem;
+  }
+
+  .sub-nav-item {
+    font-size: 1.25rem;
+  }
+}
+
+/* Larger laptops: 15-16" (1920px-2303px) */
+@media (min-width: 1920px) and (max-width: 2303px) {
   .nav-wrapper {
     width: 1320px;
     height: 1320px;
@@ -215,6 +252,43 @@
 
   .sub-nav-item {
     font-size: 1.1rem;
+  }
+}
+
+/* Mid-range laptops: 14-15" Windows (1600px-1919px) */
+@media (min-width: 1600px) and (max-width: 1919px) {
+  .nav-wrapper {
+    width: 1155px;
+    height: 1155px;
+  }
+
+  .nav-container {
+    padding-top: 630px;
+    padding-right: 315px;
+    padding-bottom: 63px;
+    gap: 3rem;
+  }
+
+  .nav-left-column {
+    gap: 1.9rem;
+    padding-left: 4.5rem;
+  }
+
+  .nav-list {
+    gap: 1.1rem;
+  }
+
+  .nav-item {
+    font-size: 1.65rem;
+  }
+
+  .sub-nav-list {
+    gap: 1rem;
+    padding-top: 2.6rem;
+  }
+
+  .sub-nav-item {
+    font-size: 1rem;
   }
 }
 

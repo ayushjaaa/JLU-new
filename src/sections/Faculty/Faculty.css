@@ -1,6 +1,6 @@
 /* Faculty Section - Main Container */
 .faculty-section {
-  background-color: var(--home-bg-secondary);
+background-color: red;
   padding: 80px 60px;
   width: 100%;
   position: relative;
