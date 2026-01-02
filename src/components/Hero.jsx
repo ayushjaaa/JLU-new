@@ -1,5 +1,6 @@
 import './Hero.css';
 import { useState } from 'react';
+import jluLogo from '../assets/images/JLU-Main-Logo_2-White.png (1) 1.png';
 
 function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -66,7 +67,7 @@ function Hero() {
             </svg>
           </div>
           <div className="hero-flex-item jlu-logo">
-            <img src="/src/assets/images/JLU-Main-Logo_2-White.png (1) 1.png" alt="JLU Main Logo" />
+            <img src={jluLogo} alt="JLU Main Logo" />
           </div>
           <button className={`hero-flex-item item3-button ${isVisible ? 'active' : ''}`} onClick={handleItem3Click}>
             <span className="menu-text">Menu</span>

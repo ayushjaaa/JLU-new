@@ -1,4 +1,5 @@
 import './Footer.css';
+import jluLogo from '../../assets/images/JLU-Main-Logo_2-White.png (1) 1.png';
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
         <div className="footer-top-left">
           <div className="brand-block">
             <div className="footer-logo">
-              <img src="/src/assets/images/JLU-Main-Logo_2-White.png (1) 1.png" alt="Jagran Lakecity University" />
+              <img src={jluLogo} alt="Jagran Lakecity University" />
             </div>
             <div className="brand-addresses">
               <p>Jagran Lakecity University, Mugaliyachap,<br />Near Ratibad Bhopal – 462044</p>
