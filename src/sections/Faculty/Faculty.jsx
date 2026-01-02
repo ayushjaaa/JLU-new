@@ -3,6 +3,7 @@ import './Faculty.css';
 import abhishekSir from '../../assets/images/abhishek-sir.jpg 1.png';
 import pankajDas from '../../assets/images/mr.-pankaj-das-rs.jpg 1.png';
 import vivekKhare from '../../assets/images/de-vivek-khare.jpg 1.png';
+import threeMemberImage from '../../assets/images/3meberimage.png';
 import archanaJain from '../../assets/images/Archana-Jain.jpg 2.png';
 import diwakarShukla from '../../assets/images/Diwakar-Shukla.jpg 1.png';
 
@@ -24,7 +25,7 @@ const Faculty = () => {
       id: 3,
       name: 'Dr. Vivek Khare',
       designation: 'Vice Chancellor',
-      image: vivekKhare
+      image: threeMemberImage
     },
     {
       id: 4,
@@ -42,7 +43,7 @@ const Faculty = () => {
       id: 6,
       name: 'Shri. Abhishek Mohan Gupta',
       designation: 'Pro - Chancellor',
-      image: abhishekSir
+      image: vivekKhare
     }
   ];
 

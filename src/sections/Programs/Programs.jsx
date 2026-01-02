@@ -1,5 +1,15 @@
 import React from 'react';
 import './Programs.css';
+import Frame41 from '../../assets/images/Frame41.png';
+import Frame42 from '../../assets/images/Frame42.png';
+import Frame43 from '../../assets/images/Frame43.png';
+import Frame44 from '../../assets/images/Frame44.png';
+import logo1 from '../../assets/images/logo1.png';
+import logo2 from '../../assets/images/logo2.png';
+import logo3 from '../../assets/images/logo3.png';
+import logo4 from '../../assets/images/logo4.png';
+import logo5 from '../../assets/images/logo5.png';
+import logo6 from '../../assets/images/logo6.png';
 
 const Programs = () => {
   return (
@@ -8,7 +18,7 @@ const Programs = () => {
           SECTION HEADING
           =================================== */}
       <div className="programs-heading-block">
-        <h2 className="programs-main-heading">OUR PROGRAMMES</h2>
+        <h2 className="programs-main-heading">OUR PROGRAMS</h2>
         <div className="programs-heading-underline"></div>
       </div>
 
@@ -18,8 +28,8 @@ const Programs = () => {
       <div className="programs-cards-grid">
         <div className="program-card">
           <img
-            src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=800&q=80"
-            alt="University archway"
+            src={Frame41}
+            alt="Undergraduate Programmes"
             className="program-card-image"
           />
           <div className="program-card-overlay">
@@ -29,8 +39,8 @@ const Programs = () => {
 
         <div className="program-card">
           <img
-            src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80"
-            alt="Student in library"
+            src={Frame42}
+            alt="Postgraduate Programmes"
             className="program-card-image"
           />
           <div className="program-card-overlay">
@@ -40,8 +50,8 @@ const Programs = () => {
 
         <div className="program-card">
           <img
-            src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&q=80"
-            alt="Graduation certificate"
+            src={Frame43}
+            alt="Ph.D. Programmes"
             className="program-card-image"
           />
           <div className="program-card-overlay">
@@ -51,8 +61,8 @@ const Programs = () => {
 
         <div className="program-card">
           <img
-            src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=800&q=80"
-            alt="University building"
+            src={Frame44}
+            alt="Diplomas & Certification"
             className="program-card-image"
           />
           <div className="program-card-overlay">
@@ -93,48 +103,72 @@ const Programs = () => {
       {/* ===================================
           PARTNER LOGOS GRID
           =================================== */}
-      <div className="programs-partners-grid">
-        <div className="partner-logo-cell">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Middlesex_University_Logo.svg/1200px-Middlesex_University_Logo.svg.png"
-            alt="Middlesex University"
-            className="partner-logo"
-          />
+      <div className="programs-partners-container">
+        <div className="programs-partner-large-cell">
+          <p className="programs-partner-large-cell-label">Lorem ipsum</p>
+          <div className="programs-partner-large-cell-content">
+            <div className="partner-large-logo-wrapper partner-large-logo-wrapper-1">
+              <img
+                src={logo1}
+                alt="Partner Logo 1"
+                className="partner-large-logo"
+              />
+            </div>
+          </div>
         </div>
-        <div className="partner-logo-cell">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5c/King%27s_College_London_logo.svg/1200px-King%27s_College_London_logo.svg.png"
-            alt="King's College London"
-            className="partner-logo"
-          />
+        <div className="programs-partner-large-cell">
+          <p className="programs-partner-large-cell-label">Lorem ipsum</p>
+          <div className="programs-partner-large-cell-content">
+            <div className="partner-large-logo-wrapper partner-large-logo-wrapper-2">
+              <img
+                src={logo2}
+                alt="Partner Logo 2"
+                className="partner-large-logo"
+              />
+            </div>
+          </div>
         </div>
-        <div className="partner-logo-cell">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/NUS_coat_of_arms.svg/1200px-NUS_coat_of_arms.svg.png"
-            alt="National University of Singapore"
-            className="partner-logo"
-          />
-        </div>
-        <div className="partner-logo-cell">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/CII_Logo.svg/1200px-CII_Logo.svg.png"
-            alt="Confederation of Indian Industry"
-            className="partner-logo"
-          />
-        </div>
-        <div className="partner-logo-cell">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f6/FICCI_Logo.svg/1200px-FICCI_Logo.svg.png"
-            alt="FICCI"
-            className="partner-logo"
-          />
-        </div>
-        <div className="partner-logo-cell">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Grant_Thornton_logo.svg/1200px-Grant_Thornton_logo.svg.png"
-            alt="Grant Thornton"
-            className="partner-logo"
-          />
+      </div>
+
+      <div className="programs-partners-grid-wrapper">
+        <p className="programs-partner-grid-label">Lorem ipsum</p>
+        <div className="programs-partners-grid">
+          <div className="partner-logo-cell">
+            <div className="partner-logo-wrapper partner-logo-wrapper-3">
+              <img
+                src={logo3}
+                alt="Partner Logo 3"
+                className="partner-logo"
+              />
+            </div>
+          </div>
+          <div className="partner-logo-cell">
+            <div className="partner-logo-wrapper partner-logo-wrapper-4">
+              <img
+                src={logo4}
+                alt="Partner Logo 4"
+                className="partner-logo"
+              />
+            </div>
+          </div>
+          <div className="partner-logo-cell">
+            <div className="partner-logo-wrapper partner-logo-wrapper-5">
+              <img
+                src={logo5}
+                alt="Partner Logo 5"
+                className="partner-logo"
+              />
+            </div>
+          </div>
+          <div className="partner-logo-cell">
+            <div className="partner-logo-wrapper partner-logo-wrapper-6">
+              <img
+                src={logo6}
+                alt="Partner Logo 6"
+                className="partner-logo"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

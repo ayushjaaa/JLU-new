@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './VoicesOfJLU.css';
 
 const VoicesOfJLU = () => {
-  const [activeIndex, setActiveIndex] = useState(7);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const galleryRef = useRef(null);
+  const itemRefs = useRef([]);
+  const scrollTimeout = useRef(null);
 
   const testimonials = [
     {
@@ -63,6 +67,65 @@ const VoicesOfJLU = () => {
     }
   ];
 
+  // Check if mobile on mount and window resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Scroll-based activation for mobile - viewport based with throttling
+  useEffect(() => {
+    if (!isMobile) return;
+
+    const handleScroll = () => {
+      // Throttle scroll events for better performance
+      if (scrollTimeout.current) return;
+
+      scrollTimeout.current = setTimeout(() => {
+        const viewportCenter = window.innerHeight / 2;
+
+        // Find which item is closest to the center of viewport
+        let closestIndex = null;
+        let minDistance = Infinity;
+
+        itemRefs.current.forEach((item, index) => {
+          if (item) {
+            const rect = item.getBoundingClientRect();
+            const itemCenter = rect.top + rect.height / 2;
+            const distance = Math.abs(viewportCenter - itemCenter);
+
+            // Only activate if item is reasonably visible in viewport
+            if (distance < minDistance && rect.top < window.innerHeight && rect.bottom > 0) {
+              minDistance = distance;
+              closestIndex = index;
+            }
+          }
+        });
+
+        setActiveIndex(closestIndex);
+        scrollTimeout.current = null;
+      }, 100); // Throttle to every 100ms
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    // Set initial active item
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+    };
+  }, [isMobile]);
+
   return (
     <section className="voices-of-jlu">
       <div className="section-header">
@@ -73,10 +136,11 @@ const VoicesOfJLU = () => {
         </p>
       </div>
 
-      <div className="image-gallery">
+      <div className="image-gallery" ref={galleryRef}>
         {testimonials.map((testimonial, index) => (
           <div
             key={testimonial.id}
+            ref={(el) => (itemRefs.current[index] = el)}
             className={`gallery-item ${activeIndex === index ? 'active' : ''}`}
             onClick={() => setActiveIndex(index)}
           >

@@ -20,24 +20,29 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 24px;
+  gap: clamp(16px, 2vw, 24px);
+  padding: 0 clamp(20px, 4vw, 40px);
+  width: 100%;
+  max-width: 1200px;
 }
 
 .awards-text-wrapper h2 {
-  font-size: 120px;
+  font-size: clamp(40px, 8vw, 120px);
   font-weight: 700;
   color: #2d2d2d;
   text-transform: uppercase;
-  letter-spacing: -2px;
+  letter-spacing: clamp(-1.5px, -0.15vw, -2px);
   line-height: 1.2;
   margin: 0;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .awards-text-wrapper p {
-  font-size: 1.125rem;
+  font-size: clamp(0.875rem, 1.5vw, 1.125rem);
   line-height: 1.6;
   color: #666;
-  max-width: 600px;
+  max-width: min(600px, 90%);
   margin: 0;
   font-weight: 400;
 }
@@ -167,8 +172,8 @@
    ======================================== */
 
 @media (max-width: 1200px) {
-  .awards-text-wrapper h2 {
-    font-size: 100px;
+  .awards-text-wrapper {
+    padding: 0 clamp(24px, 5vw, 40px);
   }
 
   .awards-grid-wrapper {
@@ -177,8 +182,8 @@
 }
 
 @media (max-width: 1024px) {
-  .awards-text-wrapper h2 {
-    font-size: 80px;
+  .awards-text-wrapper {
+    gap: clamp(12px, 2vw, 20px);
   }
 
   .awards-bottom-div {
@@ -223,17 +228,13 @@
 }
 
 @media (max-width: 768px) {
-  .awards-text-wrapper h2 {
-    font-size: 60px;
+  .awards-text-wrapper {
+    padding: 0 20px;
+    gap: 16px;
   }
 
   .awards-bottom-div {
     padding: 40px 24px 80px;
-  }
-
-  .awards-text-wrapper p {
-    font-size: 0.875rem;
-    max-width: 90%;
   }
 
   .awards-grid-wrapper {
@@ -255,12 +256,8 @@
 }
 
 @media (max-width: 480px) {
-  .awards-text-wrapper h2 {
-    font-size: 48px;
-    letter-spacing: -1px;
-  }
-
-  .awards-text-wrapper p {
-    font-size: 0.8125rem;
+  .awards-text-wrapper {
+    padding: 0 16px;
+    gap: 12px;
   }
 }

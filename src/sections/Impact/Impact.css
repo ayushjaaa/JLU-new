@@ -2,32 +2,12 @@
 .impact-wrapper {
   width: 100%;
   height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: hidden;
   background-color: var(--home-bg-secondary);
   padding: 0;
   position: relative;
   display: flex;
   align-items: center;
-  scrollbar-width: thin;
-  scrollbar-color: #c4e583 #e5e5e0;
-}
-
-.impact-wrapper::-webkit-scrollbar {
-  height: 12px;
-}
-
-.impact-wrapper::-webkit-scrollbar-track {
-  background: #e5e5e0;
-}
-
-.impact-wrapper::-webkit-scrollbar-thumb {
-  background: #c4e583;
-  border-radius: 6px;
-}
-
-.impact-wrapper::-webkit-scrollbar-thumb:hover {
-  background: #b5d674;
 }
 
 /* Main Section - Horizontal scroll content */
@@ -36,6 +16,26 @@
   flex-direction: row;
   min-width: max-content;
   height: 100%;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.impact-section.animate {
+  animation: slideLeft 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--scroll-distance, -100%), 0, 0);
+  }
 }
 
 /* Left Content Area */
@@ -75,6 +75,8 @@
 .impact-visual-wrapper {
   display: flex;
   align-items: center;
+  height: 100%;
+  min-height: 520px;
 }
 
 /* Right Visual Area - Horizontal Card + Image Pattern */
@@ -89,34 +91,75 @@
 
 /* Impact Cards */
 .impact-card {
-  flex: 0 0 600px;
+  flex: 0 0 min(600px, 35vw);
   height: 520px;
-  border-radius: 12px;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 60px 40px;
+  padding: min(60px, 4vw) min(40px, 2.5vw);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  pointer-events: none;
+  user-select: none;
 }
 
 .green-card {
-  background-color: #c4e583;
+  background-color: #AEF066;
 }
 
 .blue-card {
-  background-color: #5b8de8;
+  background-color: #1673FF;
 }
 
 .yellow-card {
-  background-color: #e8d85b;
+  background-color: #E3E300;
 }
 
 .card-number {
-  font-size: 90px;
-  font-weight: 700;
+  font-size: 10px;
+  font-weight: 500;
   color: #2d3436;
   line-height: 1;
   text-align: left;
+}
+
+.card-subtitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d3436;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 8px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2d3436;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.card-description {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2d3436;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.card-description p {
+  margin: 0 0 8px 0;
+}
+
+.card-link {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .card-text {
@@ -134,14 +177,14 @@
   height: 520px;
   object-fit: cover;
   object-position: center;
-  border-radius: 12px;
-}
-
-/* Campus Gateway specific size */
-.campus-gateway-image {
-  flex: 0 0 40px;
-  height: 150px;
-  align-self: flex-start;
+  border-radius: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  image-rendering: auto;
+  pointer-events: none;
+  user-select: none;
 }
 
 /* Responsive Design */
@@ -160,8 +203,8 @@
     padding: 20px 18px;
   }
 
-  .card-number {
-    font-size: 38px;
+  sc {
+    font-size: 10px;
   }
 
   .card-text {
@@ -170,7 +213,7 @@
 
   .side-image {
     flex: 0 0 210px;
-    height: 140px;
+    height: 100px;
   }
 }
 
@@ -204,7 +247,7 @@
   }
 
   .card-number {
-    font-size: 32px;
+    font-size: 10px;
   }
 
   .card-text {
@@ -255,7 +298,7 @@
   }
 
   .card-number {
-    font-size: 28px;
+    font-size: 10px;
   }
 
   .card-text {
@@ -288,7 +331,7 @@
   }
 
   .card-number {
-    font-size: 24px;
+    font-size: 10px;
   }
 
   .card-text {

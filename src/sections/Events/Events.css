@@ -131,11 +131,11 @@
   min-width: calc(45% - 16px);
   background-color: #f0ede8;
   border-radius: 0;
-  padding: 0px 32px 32px 2px;
+  padding: 0 32px 12px 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 2px;
   position: relative;
   transition: all 0.3s ease;
   box-sizing: border-box;
@@ -166,6 +166,7 @@
 
 .event-date-badge {
   flex-shrink: 0;
+
   width: 90px;
   height: 90px;
   border-radius: 8px;
@@ -174,7 +175,7 @@
   align-items: center;
   justify-content: center;
   gap: 4px;
-  padding: 12px;
+
 }
 
 .event-month {
@@ -264,7 +265,7 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #F6F7F0;
   border: 1px solid #e0e0e0;
   display: flex;
   align-items: center;

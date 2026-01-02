@@ -11,59 +11,45 @@ const WhyJLU = () => {
 
       {/* Content Section - Overlaying Foreground Layer */}
       <div className="whyjlu-content">
-        <div className="whyjlu-cards-container">
-          {/* Green Card */}
-          <div className="whyjlu-card green-card-why">
-            <div className="card-top">
-              <h2 className="card-big-number">100+</h2>
-              <p className="card-subtitle">Lorem ipsum dolor</p>
-            </div>
-            <div className="card-bottom">
-              <p className="card-description">
-                Lorem ipsum dolor sit amet consectetur. Feugiat mi enim lectus convallis scelerisque dexjfdi kedj.
-              </p>
-            </div>
+        <div className="grid-item item-1">
+          <div className="card-top">
+            <h4 className="card-number">100+</h4>
+            <h5 className="card-subtitle">Lorem ipsum dolor .</h5>
           </div>
-
-          {/* Blue Card */}
-          <div className="whyjlu-card blue-card-why">
-            <div className="card-top">
-              <h2 className="card-title-white">Lorem ipsum</h2>
-            </div>
-            <div className="card-middle">
-              <p className="card-description-white">
-                Lorem ipsum dolor sit amet consectetur. Feugiat mi enim lectus convallis scelerisque
-              </p>
-            </div>
-            <div className="card-bottom">
-              <a href="#" className="card-link">Lorem ipsum</a>
-              <a href="#" className="card-link">Lorem ipsum</a>
-            </div>
+          <div className="card-bottom">
+            <p className="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum. Quisquam, voluptatum.</p>
           </div>
-
-          {/* Red/Pink Card */}
-          <div className="whyjlu-card red-card-why">
-            <div className="card-top">
-              <h2 className="card-percentage">100%</h2>
-              <p className="card-subtitle-white">Lorem ipsum dolor</p>
-            </div>
-            <div className="card-bottom">
-              <p className="card-description-white">
-                Lorem ipsum dolor sit amet consectetur. Feugiat mi enim lectus convallis scelerisque dexjfdi kedj.
-              </p>
-            </div>
+        </div>
+        <div className="grid-item item-2">
+          <div className="card-top">
+            <h3 className="card-heading">Lorem ipsum</h3>
           </div>
-
-          {/* Yellow Card */}
-          <div className="whyjlu-card yellow-card-why">
-            <div className="card-top">
-              <h2 className="card-title-white">Lorem ipsum</h2>
+          <div className="card-bottom">
+            <p className="card-paragraph">Lorem ipsum dolor sit amet consectetur. Feugiat mi enim lectus convallis scelerisque</p>
+            <p className="card-paragraph card-paragraph-underline">Lorem ipsum</p>
+            <p className="card-paragraph card-paragraph-underline">Lorem ipsum</p>
+          </div>
+        </div>
+        <div className="grid-item item-3">
+          <div className="card-top">
+            <div className="card-top-flex">
+              <h4 className="card-number">50+</h4>
+              <h5 className="card-subtitle">Consectetur</h5>
             </div>
-            <div className="card-bottom">
-              <p className="card-description-white">
-                Lorem ipsum dolor sit amet consectetur. Feugiat mi enim lectus convallis scelerisque dexjfdi kedj sit amet.
-              </p>
-            </div>
+            <p className="card-subtitle-extra">ipsum dolor</p>
+          </div>
+          <div className="card-bottom">
+            <p className="card-description">Ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quisquam. Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+        <div className="grid-item item-4">
+          <div className="card-top">
+            <h3 className="card-heading">Lorem ipsum</h3>
+          </div>
+          <div className="card-bottom">
+            <p className="card-paragraph">Lorem ipsum dolor sit amet consectetur. Feugiat mi enim lectus convallis scelerisque</p>
+            <p className="card-paragraph card-paragraph-underline">Lorem ipsum</p>
+            <p className="card-paragraph card-paragraph-underline">Lorem ipsum</p>
           </div>
         </div>
       </div>

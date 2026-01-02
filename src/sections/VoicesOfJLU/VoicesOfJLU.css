@@ -1,7 +1,7 @@
 /* Main Section Container */
 .voices-of-jlu {
   width: 100%;
-  padding: 80px 40px;
+  padding: 80px 20px;
   background: var(--home-bg-secondary);
   display: flex;
   flex-direction: column;
@@ -48,16 +48,42 @@
 
 /* Gallery Item */
 .gallery-item {
-  flex: 0 0 8%;
+  flex: 1 1 auto;
+  min-width: 60px;
   height: 100%;
   cursor: pointer;
-  transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: flex 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              border-radius 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
   overflow: hidden;
+  border-radius: 250px;
+  position: relative;
+}
+
+/* Hover effect for desktop */
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 /* Active Gallery Item */
 .gallery-item.active {
-  flex: 0 0 40%;
+  flex: 5 1 auto;
+  border-radius: 48px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item.active:hover {
+  transform: translateY(0);
+}
+
+.gallery-item.active .gallery-image {
+  border-radius: 48px;
+}
+
+.gallery-item.active .overlay-content {
+  border-radius: 0 0 48px 48px;
 }
 
 /* Gallery Image */
@@ -67,9 +93,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 24px;
+  border-radius: 250px;
   position: relative;
   overflow: hidden;
+  transition: border-radius 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Image Overlay for Darkening Effect */
@@ -105,14 +132,14 @@
   z-index: 2;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease, border-radius 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   gap: 12px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-radius: 0 0 24px 24px;
+  border-radius: 0 0 250px 250px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -147,7 +174,7 @@
 /* Responsive Design - Tablets */
 @media (max-width: 1024px) {
   .voices-of-jlu {
-    padding: 60px 30px;
+    padding: 60px 40px;
     gap: 40px;
   }
 
@@ -183,7 +210,7 @@
 /* Responsive Design - Mobile */
 @media (max-width: 768px) {
   .voices-of-jlu {
-    padding: 40px 20px;
+    padding: 40px 24px;
     gap: 32px;
   }
 
@@ -196,33 +223,61 @@
   }
 
   .image-gallery {
-    height: 350px;
-    gap: 8px;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    overflow: visible;
   }
 
   .gallery-item {
-    flex: 0 0 6%;
-  }
-
-  .gallery-item.active {
-    flex: 0 0 50%;
-  }
-
-  .overlay-content {
-    padding: 20px;
-  }
-
-  .testimonial-name {
-    font-size: 1.25rem;
-  }
-
-  .testimonial-quote {
-    font-size: 0.875rem;
+    flex: 0 0 140px;
+    width: 100%;
+    min-width: unset;
+    border-radius: 32px;
   }
 
   /* Disable hover effect on mobile */
-  .gallery-item:not(.active):hover {
-    flex: 0 0 6%;
+  .gallery-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .gallery-item.active {
+    flex: 0 0 380px;
+    border-radius: 32px;
+  }
+
+  .gallery-item.active:hover {
+    transform: none;
+  }
+
+  .gallery-item .gallery-image {
+    border-radius: 32px;
+  }
+
+  .gallery-item.active .gallery-image {
+    border-radius: 32px;
+  }
+
+  .gallery-item .overlay-content {
+    border-radius: 0 0 32px 32px;
+  }
+
+  .gallery-item.active .overlay-content {
+    border-radius: 0 0 32px 32px;
+  }
+
+  .overlay-content {
+    padding: 24px;
+  }
+
+  .testimonial-name {
+    font-size: 1.35rem;
+  }
+
+  .testimonial-quote {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 }
 
@@ -237,29 +292,50 @@
   }
 
   .image-gallery {
-    height: 300px;
+    height: auto;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
+    overflow: visible;
   }
 
   .gallery-item {
-    flex: 0 0 60px;
+    flex: 0 0 120px;
     width: 100%;
+    min-width: unset;
+    border-radius: 24px;
   }
 
   .gallery-item.active {
-    flex: 0 0 200px;
+    flex: 0 0 320px;
+    border-radius: 24px;
+  }
+
+  .gallery-item .gallery-image {
+    border-radius: 24px;
+  }
+
+  .gallery-item.active .gallery-image {
+    border-radius: 24px;
+  }
+
+  .gallery-item .overlay-content {
+    border-radius: 0 0 24px 24px;
+  }
+
+  .gallery-item.active .overlay-content {
+    border-radius: 0 0 24px 24px;
   }
 
   .overlay-content {
-    padding: 16px;
+    padding: 18px;
   }
 
   .testimonial-name {
-    font-size: 1.125rem;
+    font-size: 1.15rem;
   }
 
   .testimonial-quote {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 }

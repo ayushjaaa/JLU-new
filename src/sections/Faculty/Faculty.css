@@ -1,7 +1,7 @@
 /* Faculty Section - Main Container */
 .faculty-section {
   background-color: var(--home-bg-secondary);
-  padding: 80px 60px;
+  padding: 40px 20px;
   width: 100%;
   position: relative;
   z-index: 10;
@@ -33,19 +33,20 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 1px;
 }
 
 /* Faculty Row Wrapper */
 .faculty-row {
   width: 100%;
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 /* First Row - Justify content end (right aligned) */
 .faculty-row-first {
   justify-content: flex-end;
+  padding-bottom: 40px;
 }
 
 /* Second Row - Justify content start (left aligned) */
@@ -58,14 +59,14 @@
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  max-width: 320px;
+  max-width: 350px;
   flex-shrink: 0;
 }
 
 /* Image Container */
 .faculty-image-wrapper {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 4;
   overflow: hidden;
   margin-bottom: 16px;
 }

@@ -1,0 +1,107 @@
+.three-box-wrapper {
+  width: 100%;
+  background-color: #f5f5f0;
+  padding: 0;
+  position: relative;
+  z-index: 100;
+}
+
+.three-box-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Base box styles */
+.box {
+  background: linear-gradient(135deg, #F5F5F0 0%, #FFFFFF 100%);
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+
+/* Tall boxes (1 and 3) */
+.box-tall {
+  height: 540px;
+}
+
+/* Short box (2) */
+.box-short {
+  height: 405px;
+}
+
+/* Individual box colors */
+.box-1 {
+  background: linear-gradient(135deg, #B8E986 0%, #A5D975 100%);
+  border: none;
+}
+
+.box-2 {
+  background: linear-gradient(135deg, #FFE5B4 0%, #FFD89B 100%);
+  border: none;
+}
+
+.box-3 {
+  background: linear-gradient(135deg, #B8E986 0%, #A5D975 100%);
+  border: none;
+}
+
+/* Image styling */
+.box-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .three-box-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .box-tall,
+  .box-short {
+    height: 250px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .three-box-wrapper {
+    padding: 60px 0;
+  }
+
+  .three-box-container {
+    padding: 0 20px;
+  }
+
+  .box {
+    padding: 30px 20px;
+  }
+
+  .box h3 {
+    font-size: 24px;
+  }
+
+  .box p {
+    font-size: 14px;
+  }
+
+  .box-tall,
+  .box-short {
+    height: 200px;
+  }
+}

@@ -33,6 +33,18 @@
   --home-text-paragraph: #939393;    /* Card paragraph text (lighter gray) */
   --home-text-span: #6A7479;         /* Span/secondary text color */
 
+  /* Card Colors */
+  --card-color-1: #AEF066;           /* Light green */
+  --card-color-2: #118AB2;           /* Blue */
+  --card-color-3: #EF476F;           /* Pink/Red */
+  --card-color-4: #FFD166;           /* Yellow */
+
+  /* Card Text Colors */
+  --card-text-1: #03463B;            /* Dark green for card 1 */
+  --card-text-2: #FFFFFF;            /* White for card 2 */
+  --card-text-3: #FFFFFF;            /* White for card 3 */
+  --card-text-4: #FFFFFF;            /* White for card 4 */
+
   /* ============================================
      ABOUT PAGE SPECIFIC COLORS & BACKGROUNDS
      ============================================ */
