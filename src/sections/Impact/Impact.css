@@ -16,26 +16,22 @@
   flex-direction: row;
   min-width: max-content;
   height: 100%;
-  will-change: transform;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  touch-action: none;
+  will-change: transform;
 }
 
-.impact-section.animate {
-  animation: slideLeft 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(var(--scroll-distance, -100%), 0, 0);
-  }
+/* Dragging state */
+.impact-section.dragging {
+  cursor: grabbing;
 }
 
 /* Left Content Area */
@@ -71,7 +67,7 @@
   max-width: 500px;
 }
 
-/* Right Visual Wrapper */
+/* Right Visual Wrapper - Marquee Container */
 .impact-visual-wrapper {
   display: flex;
   align-items: center;
@@ -85,8 +81,8 @@
   flex-direction: row;
   align-items: center;
   gap: 20px;
-  padding-right: 120px;
-  overflow: hidden;
+  padding-right: 20px;
+  flex-shrink: 0;
 }
 
 /* Impact Cards */
