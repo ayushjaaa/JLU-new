@@ -34,7 +34,7 @@
   border-radius: 16px;
 
   /* Background */
-  background: #FF0000;
+  background: #FFFFFF;
 
   /* Reset */
   cursor: pointer;
@@ -168,7 +168,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   z-index: 100000;
 
