@@ -406,8 +406,8 @@
 
 .hero-center-circle {
   position: absolute;
-  width: clamp(2rem, 4vw, 6rem);
-  height: clamp(2rem, 4vw, 6rem);
+  width: clamp(2rem, 4.7vw, 6rem);
+  height: clamp(2rem, 4.7vw, 6rem);
   background-color: #F6F7F0;
   border-radius: 50%;
   top: 100%;
