@@ -406,8 +406,8 @@
 
 .hero-center-circle {
   position: absolute;
-  width: clamp(2rem, 4.7vw, 6rem);
-  height: clamp(2rem, 4.7vw, 6rem);
+  width: clamp(2rem, 5.6vw, 6rem);
+  height: clamp(2rem, 5.6vw, 6rem);
   background-color: #F6F7F0;
   border-radius: 50%;
   top: 100%;
@@ -434,7 +434,7 @@
   border-radius: 50%;
   background-color: transparent;
   background-image: url('../assets/images/arrow1.png');
-  background-size: 30%;
+  background-size: 20%;
   background-position: center;
   background-repeat: no-repeat;
 }
